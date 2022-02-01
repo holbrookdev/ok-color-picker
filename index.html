@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ok Color Picker</title>
+    <meta
+      name="description"
+      content="Pick colors using the Okhsv and Okhsl color spaces (based on Oklab)."
+    />
+    <meta name="theme-color" content="#3a3a3a" />
+    <meta name="msapplication-TileColor" content="#3a3a3a" />
+    <meta name="application-name" content="Ok Color Picker" />
+    <link
+      rel="preload"
+      href="/fonts/Inter-roman.var.3_19.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="alternate icon"
+      href="/favicon.ico"
+      sizes="16x16 32x32 64x64 128x128"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="mask-icon" href="/favicon-mask.svg" color="#ffffff" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link
+      rel="icon"
+      href="/icons/favicon-48x48-android"
+      type="image/png"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      href="/icons/favicon-192x192-android"
+      type="image/png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      href="/icons/favicon-196x196-android"
+      type="image/png"
+      sizes="196x196"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Ok Color Picker</h1>
+      <div id="githubButton">
+        <a
+          class="github-button"
+          href="https://github.com/holbrookdev/ok-color-picker"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-icon="octicon-star"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Star holbrookdev/ok-color-picker on GitHub"
+          >Star</a
+        >
+      </div>
+    </header>
+    <noscript>You need to enable JavaScript to run this app. </noscript>
+    <main>
+      <div id="hexInput">
+        <label class="visually-hidden" for="hexValue">Hex value</label
+        ><input id="hexValue" type="text" value="#000000" spellcheck="false" />
+      </div>
+      <div id="mainWindow">
+        <div id="actions">
+          <div id="colorModeToggle">
+            <button>Okhsv</button>
+            <button>Okhsl</button>
+          </div>
+          <span id="oklab"></span>
+        </div>
+        <div id="sliders">
+          <div class="sliderWrapper">
+            <label class="sliderLabel" for="slider1"></label>
+            <div class="slider">
+              <div class="rangeWrapper">
+                <div class="range">
+                  <input id="slider1" type="range" value="-1" />
+                </div>
+              </div>
+              <label class="visually-hidden" for="slider1Text"
+                >Slider 1 Text Input</label
+              >
+              <input id="slider1Text" type="text" spellcheck="false" />
+            </div>
+          </div>
+          <div class="sliderWrapper">
+            <label class="sliderLabel" for="slider2"></label>
+            <div class="slider">
+              <div class="rangeWrapper">
+                <div class="range">
+                  <input id="slider2" type="range" value="-1" />
+                </div>
+              </div>
+              <label class="visually-hidden" for="slider2Text"
+                >Slider 2 Text Input</label
+              >
+              <input id="slider2Text" type="text" spellcheck="false" />
+            </div>
+          </div>
+          <div class="sliderWrapper">
+            <label class="sliderLabel" for="slider3"></label>
+            <div class="slider">
+              <div class="rangeWrapper">
+                <div class="range">
+                  <input id="slider3" type="range" value="-1" />
+                </div>
+              </div>
+              <label class="visually-hidden" for="slider3Text"
+                >Slider 3 Text Input</label
+              >
+              <input id="slider3Text" type="text" spellcheck="false" />
+            </div>
+          </div>
+          <div class="sliderWrapper">
+            <label class="sliderLabel" for="slider4"></label>
+            <div class="slider">
+              <div class="rangeWrapper">
+                <div class="range">
+                  <input id="slider4" type="range" value="-1" />
+                </div>
+              </div>
+              <label class="visually-hidden" for="slider4Text"
+                >Slider 4 Text Input</label
+              >
+              <input id="slider4Text" type="text" spellcheck="false" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span
+        >Made by
+        <a href="https://github.com/holbrookdev" target="_blank" rel="noopener"
+          >Brian Holbrook</a
+        >. Inspired by
+        <a
+          href="https://bottosson.github.io/posts/colorpicker/"
+          target="_blank"
+          rel="noopener"
+          >Björn Ottosson</a
+        >. Code on
+        <a
+          href="https://github.com/holbrookdev/ok-color-picker"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >.</span
+      >
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

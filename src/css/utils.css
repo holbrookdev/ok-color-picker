@@ -1,0 +1,19 @@
+/* Hide content but stay accessible to screen readers */
+.visually-hidden {
+  /* Protect the layout */
+  position: absolute;
+  /* Contain content within 1px box */
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  /* Remove any visible trace (e.g. background color) */
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); /* legacy browsers */
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%); /* modern browsers */
+  /* Prevent screen reader skipping spaces between words */
+  white-space: nowrap;
+}

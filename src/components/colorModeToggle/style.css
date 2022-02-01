@@ -1,0 +1,33 @@
+#colorModeToggle {
+  display: flex;
+  gap: 12px;
+  justify-content: right;
+}
+
+#colorModeToggle > button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  width: 72px;
+  color: rgb(246 246 246 / 62%);
+  background: transparent;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#colorModeToggle > button.active {
+  background: rgb(246 246 246 / 9%);
+  box-shadow: inset 0 0 0 1px rgb(246 246 246 / 9%);
+}
+
+#colorModeToggle > button:hover {
+  text-decoration: underline;
+}
+
+#colorModeToggle > button.active:hover {
+  text-decoration: none;
+}

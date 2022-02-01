@@ -1,0 +1,16 @@
+{
+  "name": "ok-color-picker",
+  "version": "0.0.0",
+  "author": "Brian Holbrook <83974085+holbrookdev@users.noreply.github.com>",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vite-plugin-pwa": "^0.11.13",
+    "vite-plugin-singlefile": "^0.6.3"
+  }
+}

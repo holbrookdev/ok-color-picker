@@ -1,0 +1,6 @@
+#sliders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px 21px;
+}

@@ -1,0 +1,39 @@
+#hexInput {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 42px 0 68px 0;
+}
+
+#hexInput input[type="text"] {
+  background: transparent;
+  max-width: 840px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--textColor, #000000);
+  transition: color 150ms linear;
+}
+
+@media (max-width: 767px) {
+  #hexInput input[type="text"] {
+    font-size: 48px;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  #hexInput input[type="text"] {
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+      sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+      Noto Color Emoji;
+    font-feature-settings: "case", "cv02", "cv03", "cv04";
+  }
+}

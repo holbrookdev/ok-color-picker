@@ -1,0 +1,185 @@
+.sliderWrapper {
+  width: 100%;
+  padding: 4px 0;
+}
+
+.sliderLabel {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.0125em;
+  color: rgb(246 246 246 / 85%);
+}
+
+.slider {
+  width: 100%;
+  height: 64px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0 12px;
+}
+
+.rangeWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background-image: var(--bg-alpha);
+  background-size: 12px 12px;
+  background-repeat: repeat;
+  background-position-x: -1px;
+  background-position-y: -1px;
+  box-shadow: 0 0 0 1px #373737;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 8px;
+  position: relative;
+}
+
+.sliderWrapper:nth-child(1) .range {
+  background: var(--sliderBackground1, transparent);
+}
+
+.sliderWrapper:nth-child(2) .range {
+  background: var(--sliderBackground2, transparent);
+}
+
+.sliderWrapper:nth-child(3) .range {
+  background: var(--sliderBackground3, transparent);
+}
+
+.sliderWrapper:nth-child(4) .range {
+  background: var(--sliderBackground4, transparent);
+}
+
+.range::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 5px;
+  background-color: white;
+  top: -2px;
+  margin: 0 calc(50% - 2px);
+}
+
+.range input {
+  display: block !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent;
+  color: transparent !important;
+  border-color: transparent !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: 48px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  z-index: 1;
+}
+
+.range input:active {
+  cursor: grabbing !important;
+}
+
+.range input::-webkit-slider-thumb {
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: block !important;
+  float: none !important;
+  position: static !important;
+  writing-mode: unset !important;
+  direction: unset !important;
+  user-select: none !important;
+  background: transparent;
+  cursor: pointer !important;
+  width: 24px !important;
+  height: 50px !important;
+  border-radius: 8px !important;
+  border: none;
+  box-shadow: 0 0 0 1px #222222, inset 0 0 0 1px #595959;
+  margin-top: -1px;
+}
+
+.range input::-webkit-slider-thumb:active {
+  cursor: grabbing !important;
+}
+
+.range input::-moz-range-thumb {
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: block !important;
+  float: none !important;
+  position: static !important;
+  writing-mode: unset !important;
+  direction: unset !important;
+  user-select: none !important;
+  background: transparent;
+  cursor: pointer !important;
+  width: 24px !important;
+  height: 50px !important;
+  border-radius: 8px !important;
+  border: none;
+  box-shadow: 0 0 0 1px #222222, inset 0 0 0 1px #595959;
+}
+
+.range input::-moz-range-thumb:active {
+  cursor: grabbing !important;
+}
+
+.range input::-ms-thumb {
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: block !important;
+  float: none !important;
+  position: static !important;
+  writing-mode: unset !important;
+  direction: unset !important;
+  user-select: none !important;
+  background: transparent;
+  cursor: pointer !important;
+  width: 24px !important;
+  height: 50px !important;
+  border-radius: 8px !important;
+  border: none;
+  box-shadow: 0 0 0 1px #222222, inset 0 0 0 1px #595959;
+}
+
+.range input::-ms-thumb:active {
+  cursor: grabbing !important;
+}
+
+.range input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background: transparent;
+  position: relative;
+}
+
+.range input::-moz-range-track {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.range input::-ms-track {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background: transparent;
+}
