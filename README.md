@@ -19,6 +19,9 @@
     ·
     <a href="https://github.com/holbrookdev/ok-color-picker/issues">Request Feature</a>
   </p>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/44a29451-d9a1-481b-b836-493a29038137/deploy-status)](https://app.netlify.com/sites/ok-color-picker/deploys)
+
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -46,7 +49,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - [Björn Ottosson](https://bottosson.github.io) (created Oklab, Okhsv, & Okhsl)
 
-<br/>
+<br />
 
 <p><small>Copyright &copy; 2022 Brian Holbrook</small></p>
 
