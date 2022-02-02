@@ -6,27 +6,27 @@ export default defineConfig({
   plugins: [
     VitePWA({
       includeAssets: [
-        "favicon.svg",
-        "favicon-mask.svg",
-        "favicon.ico",
-        "apple-touch-icon.png",
-        "icons/pwa-maskable-512x512.png",
-        "icons/apple-touch-icon-152x152.png",
-        "icons/apple-touch-icon-167x167.png",
-        "icons/apple-touch-icon-180x180.png",
-        "icons/favicon-16x16.png",
-        "icons/favicon-32x32.png",
-        "icons/favicon-48x48-android.png",
-        "icons/favicon-64x64.png",
-        "icons/favicon-128x128.png",
-        "icons/favicon-192x192-android.png",
-        "icons/favicon-196x196-android.png",
-        "icons/mstile-150x150.png",
-        "icons/pwa-192x192.png",
-        "icons/pwa-256x256.png",
-        "icons/pwa-512x512.png",
-        "fonts/Inter-roman.var.3_19.woff2",
-        "robots.txt"
+        "/favicon.svg",
+        "/favicon-mask.svg",
+        "/favicon.ico",
+        "/apple-touch-icon.png",
+        "/icons/pwa-maskable-512x512.png",
+        "/icons/apple-touch-icon-152x152.png",
+        "/icons/apple-touch-icon-167x167.png",
+        "/icons/apple-touch-icon-180x180.png",
+        "/icons/favicon-16x16.png",
+        "/icons/favicon-32x32.png",
+        "/icons/favicon-48x48-android.png",
+        "/icons/favicon-64x64.png",
+        "/icons/favicon-128x128.png",
+        "/icons/favicon-192x192-android.png",
+        "/icons/favicon-196x196-android.png",
+        "/icons/mstile-150x150.png",
+        "/icons/pwa-192x192.png",
+        "/icons/pwa-256x256.png",
+        "/icons/pwa-512x512.png",
+        "/fonts/Inter-roman.var.3_19.woff2",
+        "/robots.txt"
       ],
       manifest: {
         name: "Ok Color Picker",
@@ -54,7 +54,7 @@ export default defineConfig({
             src: "icons/pwa-maskable-512x512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable"
+            purpose: "maskable"
           }
         ]
       }
