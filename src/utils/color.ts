@@ -25,9 +25,7 @@ export function okhsvToOklab(
     return [0, 0, 0, A];
   }
   const srgb = okhsv_to_srgb(h, s, v);
-  const rgb = <[number, number, number]>(
-    srgb.map((v) => srgb_transfer_function_inv(v / 255))
-  );
+  const rgb = <Tristimulus>srgb.map((v) => srgb_transfer_function_inv(v / 255));
   return <Color>[...linear_srgb_to_oklab(...rgb), A];
 }
 
@@ -60,9 +58,7 @@ export function okhslToOklab(
     return [0, 0, 0, A];
   }
   const srgb = okhsl_to_srgb(h, s, l);
-  const rgb = <[number, number, number]>(
-    srgb.map((v) => srgb_transfer_function_inv(v / 255))
-  );
+  const rgb = <Tristimulus>srgb.map((v) => srgb_transfer_function_inv(v / 255));
   return <Color>[...linear_srgb_to_oklab(...rgb), A];
 }
 
@@ -97,7 +93,6 @@ export function oklabToHex(oklab: Color) {
 function sRgbToHex(r: number, g: number, b: number, a: number) {
   const componentToHex = (x: number) => {
     const hex = Math.round(x).toString(16).padStart(2, "0");
-    console.log(x, hex);
     return hex;
   };
 
