@@ -15,17 +15,14 @@ export const sliderRangeInputEls = <NodeListOf<HTMLInputElement>>(
 );
 
 export default function initSliderRangeInputs() {
-  return new Promise((resolve) => {
-    sliderRangeInputEls.forEach((el: HTMLInputElement, key: number) => {
-      el.min = String(state.currentSliders[key].min);
-      el.max = String(state.currentSliders[key].max);
-      el.addEventListener("input", (e: Event) => handleInput(e, key));
-      el.addEventListener("change", (e: Event) => handleChange(e, key));
-      updateSliderRangeInput(state.currentSliders[key].value, key);
-    });
-    updateSliderLabels();
-    resolve(true);
+  sliderRangeInputEls.forEach((el: HTMLInputElement, key: number) => {
+    el.min = String(state.currentSliders[key].min);
+    el.max = String(state.currentSliders[key].max);
+    el.addEventListener("input", (e: Event) => handleInput(e, key));
+    el.addEventListener("change", (e: Event) => handleChange(e, key));
+    updateSliderRangeInput(state.currentSliders[key].value, key);
   });
+  updateSliderLabels();
 }
 
 export function toggleCurrentSliderMode() {

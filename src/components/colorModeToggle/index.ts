@@ -11,15 +11,12 @@ export const colorModeToggleButtonEls = <NodeListOf<HTMLButtonElement>>(
 );
 
 export default function initColorModeToggle() {
-  return new Promise((resolve) => {
-    const sliderModes = Object.values(SLIDER_MODES);
-    colorModeToggleButtonEls.forEach((el: HTMLButtonElement, key) => {
-      el.addEventListener("click", toggleColorMode);
-      if (state.sliderMode === sliderModes[key]) {
-        el.classList.add("active");
-      }
-    });
-    resolve(true);
+  const sliderModes = Object.values(SLIDER_MODES);
+  colorModeToggleButtonEls.forEach((el: HTMLButtonElement, key) => {
+    el.addEventListener("click", toggleColorMode);
+    if (state.sliderMode === sliderModes[key]) {
+      el.classList.add("active");
+    }
   });
 }
 

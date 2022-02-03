@@ -7,15 +7,10 @@ export const sliderTextInputEls = <NodeListOf<HTMLInputElement>>(
 );
 
 export default function initSliderTextInputs() {
-  return new Promise((resolve) => {
-    sliderTextInputEls.forEach((el: HTMLInputElement, key: number) => {
-      el.addEventListener("focus", (e: Event) => handleFocus(e, key));
-      el.addEventListener("blur", (e: Event) => handleBlur(e, key));
-      el.addEventListener("keydown", (e: KeyboardEvent) =>
-        handleKeydown(e, key)
-      );
-    });
-    resolve(true);
+  sliderTextInputEls.forEach((el: HTMLInputElement, key: number) => {
+    el.addEventListener("focus", (e: Event) => handleFocus(e, key));
+    el.addEventListener("blur", (e: Event) => handleBlur(e, key));
+    el.addEventListener("keydown", (e: KeyboardEvent) => handleKeydown(e, key));
   });
 }
 

@@ -18,12 +18,9 @@ export const hexInputEl = <HTMLInputElement>(
 );
 
 export default function initHexInput() {
-  return new Promise((resolve) => {
-    hexInputEl.addEventListener("click", handleFocus);
-    hexInputEl.addEventListener("blur", handleBlur);
-    hexInputEl.addEventListener("keydown", handleKeydown);
-    resolve(true);
-  });
+  hexInputEl.addEventListener("click", handleFocus);
+  hexInputEl.addEventListener("blur", handleBlur);
+  hexInputEl.addEventListener("keydown", handleKeydown);
 }
 
 export function updateHexInput(value: string) {

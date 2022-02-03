@@ -8,6 +8,8 @@ import initSliders from "./components/sliders";
 import initPWA from "./pwa";
 import initGitHubButton from "./components/githubButton";
 
-initSliders().then(initHexInput).then(initActionBar);
+initSliders();
+initHexInput();
+initActionBar();
 initPWA();
 initGitHubButton();
