@@ -5,6 +5,7 @@ import { updateSliderTextInput } from "../sliderTextInputs";
 import { okhsvToOklab, okhslToOklab } from "../../../utils/color";
 import { updateHexInput } from "../../hexInput";
 import { updateColors } from "../../../utils/dom";
+import debounce from "../.././../utils/debounce";
 
 export const sliderRangeLabelEls = <NodeListOf<HTMLLabelElement>>(
   document.querySelectorAll(".sliderLabel")
@@ -83,6 +84,10 @@ export function getValue(value: number, key: number) {
     : value;
 }
 
+const updateAddressBar = debounce((hex: string) => {
+  window.location.hash = hex;
+}, 300);
+
 function handleSync(skipHexInput: boolean = false) {
   const oklab = getOklab();
   const hex = oklabToHex(oklab);
@@ -90,6 +95,7 @@ function handleSync(skipHexInput: boolean = false) {
     updateHexInput(hex);
   }
   updateDomColors(hex, oklab);
+  updateAddressBar(hex);
 }
 
 function handleAsync() {}

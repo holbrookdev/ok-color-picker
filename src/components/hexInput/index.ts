@@ -5,6 +5,7 @@ import {
   oklabToOkhsv,
   sRgbToOklab
 } from "../../utils/color";
+import { isHex, getHexTokensFromString, getRgbaFromHex } from "../../utils/hex";
 import {
   getOklab,
   updateSliderRangeInputs
@@ -37,14 +38,10 @@ function handleFocus(e: Event) {
 
 function handleInput(e: Event) {
   const el = <HTMLInputElement>e.target;
-  let tokens = getHexTokens(el.value);
+  let hex = getHexTokensFromString(el.value);
 
-  if (isHex(tokens)) {
-    let [r, g, b, alpha] = tokens!.map((v: string) =>
-      v.length === 1 ? parseInt(v + v, 16) : parseInt(v, 16)
-    );
-
-    alpha = alpha === undefined ? 1 : alpha / 255;
+  if (isHex(hex)) {
+    let [r, g, b, alpha] = getRgbaFromHex(hex);
 
     const fn =
       state.sliderMode === SLIDER_MODES.OKHSV ? oklabToOkhsv : oklabToOkhsl;
@@ -71,17 +68,4 @@ function handleKeydown(e: KeyboardEvent) {
       break;
     }
   }
-}
-
-function getHexTokens(value: string) {
-  let tokens = value.match(
-    /^#*([a-f0-9]{1})([a-f0-9]{1})([a-f0-9]{1})$|^#*([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})$|^#*([a-f0-9]{1})([a-f0-9]{1})([a-f0-9]{1})([a-f0-9]{1})$|^#*([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})$/i
-  );
-  tokens ??= [];
-  tokens &&= tokens.slice(1).filter((v) => !!v); // remove complete match and null matches
-  return tokens;
-}
-
-function isHex(tokens: string[]) {
-  return !tokens?.length ? false : true;
 }
